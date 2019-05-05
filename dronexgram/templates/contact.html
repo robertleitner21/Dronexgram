@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu_squized_bar.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container_1">
+            <div class="logo_container">
+                {%load static%}
+                <img src="{% static 'images/logo.png'%}">
+            </div>
+
+            <nav>
+              <div class="toggle">
+                <div class="menu">
+                  <i class="fas fa-bars aria-hidden=true"></i>
+                </div>
+              </div>
+              <ul>
+                  <li><a href="{% url 'index' %}">Home</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                  <li><a href="{% url 'blog' %}">Blog</a></li>
+                  <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a href="{% url 'login' %}">Login</a></li>
+                  <li><a href="{% url 'register' %}">Register</a></li>
+              </ul>
+            </nav>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script type="text/javascript">
+              $(document).ready(function(){
+                $('.menu').click(function(){
+                  $('ul').toggleClass('active');
+                })
+              })
+            </script>
+
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="contact_method">
+            <i class="fas fa-envelope"></i>
+            <span>example@domain.com</span>
+        </div>
+        <div class="contact_method">
+            <i class="fas fa-mobile-alt"></i>
+            <span>+111111111111</span>
+        </div>
+        <div class="contact_method">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Wroclaw PL</span>
+        </div>
+    </div>
+
+
+    <div class="footer_main">
+        <div class="footer_icons">
+            <ul>
+                <li><a href="#" target="blank"><i class="fr_facebook"></i>{% load static %}<img src="{% static 'images/fb.png'%}" alt=""></a></li>
+                <li><a href="#" target="blank"><i class="fr_twitter"></i>{% load static %}<img src="{% static 'images/twitter.png'%}" alt=""></a></li>
+                <li><a href="#" target="blank"><i class="fr_instagram"></i>{% load static %}<img src="{% static 'images/insta.png'%}" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cloud1">{% load static %}<img src="{% static 'images/cloud1.png'%}"></div>
+</body>
+</html>

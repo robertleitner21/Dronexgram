@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu_squized_bar.css'%}">
+    <script type="text/javascript" src="{% static 'js/lightbox-plus-jquery.min.js'%}"></script>
+    <title>Dronexgram</title>
+</head>
+<body>
+    <header>
+        <div class="container_1">
+            <div class="logo_container">
+                {%load static%}
+                <img src="{% static 'images/logo.png'%}">
+            </div>
+
+            <nav>
+              <div class="toggle">
+                <div class="menu">
+                  <i class="fas fa-bars aria-hidden=true"></i>
+                </div>
+              </div>
+              <ul>
+                  <li><a href="{% url 'index' %}">Home</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                  <li><a href="{% url 'blog' %}">Blog</a></li>
+                  <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a href="{% url 'login' %}">Login</a></li>
+                  <li><a href="{% url 'register' %}">Register</a></li>
+              </ul>
+            </nav>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script type="text/javascript">
+              $(document).ready(function(){
+                $('.menu').click(function(){
+                  $('ul').toggleClass('active');
+                })
+              })
+            </script>
+
+        </div>
+    </header>
+
+    <h1>{%load static%}<img src="{% static 'images/logo.png'%}"></h1>
+
+    <div class="gallery">
+        <a href="{% static 'images/drone1.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone1_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone2.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone2_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone3.jpeg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone3_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone3.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone3_tnm.jpg'%}"></a>
+        <a href="{% static 'images/drone4.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone4_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone5.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone5_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone6.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone6_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone7.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone7_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone8.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone8_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone9.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone9_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone10.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone10_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone11.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone11_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone12.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone12_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone13.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone13_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone14.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone14_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone15.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone15_tn.jpg'%}"></a>
+        <a href="{% static 'images/drone16.jpg'%}" data-lightbox="mygallery">{%load static%}<img src="{% static 'images/drone16_tn.jpg'%}"></a>
+    </div>
+
+    <div class="footer_main">
+        <div class="footer_icons">
+            <ul>
+                <li><a href="#" target="blank"><i class="fr_facebook"></i>{% load static %}<img src="{% static 'images/fb.png'%}" alt=""></a></li>
+                <li><a href="#" target="blank"><i class="fr_twitter"></i>{% load static %}<img src="{% static 'images/twitter.png'%}" alt=""></a></li>
+                <li><a href="#" target="blank"><i class="fr_instagram"></i>{% load static %}<img src="{% static 'images/insta.png'%}" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cloud1">{% load static %}<img src="{% static 'images/cloud1.png'%}"></div>
+    <div class="cloud2">{% load static %}<img src="{% static 'images/cloud2.png'%}"></div>
+</body>
+</html>

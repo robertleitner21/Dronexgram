@@ -1,0 +1,31 @@
+
+body .cloud1 img{
+    width: 100%;
+}
+
+body .cloud2 img{
+    width: 100%;
+}
+
+@keyframes cloudOne{
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(100%);
+    }
+}
+
+body .cloud1 {
+    position: absolute;
+    z-index: 9;
+    top: 5px;
+    animation: cloudOne infinite 15s linear;
+} 
+
+body .cloud2 {
+    position: absolute;
+    z-index: 9;
+    top: 105px;
+    animation: cloudOne infinite 15s linear;
+}
